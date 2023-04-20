@@ -2,7 +2,9 @@
     "private": true,
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "build-laravel-fullcalendar": "cd nova-components/LaravelFullcalendar && npm run dev",
+        "build-laravel-fullcalendar-prod": "cd nova-components/LaravelFullcalendar && npm run prod"
     },
     "devDependencies": {
         "axios": "^1.1.2",
