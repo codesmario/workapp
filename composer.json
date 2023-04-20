@@ -13,7 +13,8 @@
         "laravel/framework": "^10.8",
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
-        "laravel/nova": "~4.0"
+        "laravel/nova": "~4.0",
+        "beyondcode/viewcache": "@dev"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -71,6 +72,10 @@
         "nova": {
             "type": "composer",
             "url": "https://laravel-nova.site"
+        },
+        "0": {
+            "type": "path",
+            "url": "./nova-components/Viewcache"
         }
     }
 }

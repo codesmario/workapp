@@ -4,8 +4,44 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "937877ed96e774a2dc964c795281b81b",
+    "content-hash": "a9ed48816324f7da31916e0b93a1f116",
     "packages": [
+        {
+            "name": "beyondcode/viewcache",
+            "version": "dev-main-dev",
+            "dist": {
+                "type": "path",
+                "url": "./nova-components/Viewcache",
+                "reference": "1db5cfbbccaef159677cbad0296bc3145777f4b5"
+            },
+            "require": {
+                "php": "^7.3|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Beyondcode\\Viewcache\\ToolServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Beyondcode\\Viewcache\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova tool.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
         {
             "name": "brick/math",
             "version": "0.11.0",
@@ -8824,7 +8860,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "beyondcode/viewcache": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
