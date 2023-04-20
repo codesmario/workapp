@@ -4,15 +4,7 @@
 
     <Heading class="mb-6">Calendario</Heading>
 
-  
-
       <FullCalendar :options="calendarOptions" />
-
-      <h1 class="dark:text-white text-4xl font-light mb-6">
-        We're in a black hole.
-      </h1>
-
-
   
   </div>
 </template>
@@ -23,24 +15,30 @@ import dayGridPlugin from '@fullcalendar/daygrid'
 import interactionPlugin from '@fullcalendar/interaction'
 export default {
   components: { FullCalendar },
+  data: () => ({
+    calendarOptions: {
+      plugins: [ dayGridPlugin, interactionPlugin ],
+      initialView: 'dayGridMonth',
+      events: []
+    }
+  }),
   methods: {
     //
-    handleDateClick: function(arg) {
-      alert('date click! ' + arg.dateStr)
+    async getEvents() {
+      let usersArray = []
+      const response =  await fetch('/nova-vendor/laravel-fullcalendar/users')
+      const users = await response.json()
+      for (const user of users) {
+        usersArray.push({
+          title: user.name,
+          date: user.created_at
+        })
+      }
+      this.calendarOptions.events = usersArray
     }
   },
-  data() {
-    return {
-      calendarOptions: {
-        plugins: [ dayGridPlugin, interactionPlugin ],
-        initialView: 'dayGridMonth',
-        dateClick: this.handleDateClick,
-        events: [
-          { title: 'event 1', date: '2023-04-01' },
-          { title: 'event 2', date: '2023-04-02' }
-        ]
-      }
-    }
+  async created() {
+    await this.getEvents();
   }
 }
 </script>

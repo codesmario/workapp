@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,9 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function (Request $request) {
 //     //
 // });
+
+Route::get('/users', function (Request $request) {
+    $getUsers = User::get();
+
+    return response()->json($getUsers);
+});
