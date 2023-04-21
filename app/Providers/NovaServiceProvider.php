@@ -5,6 +5,8 @@ namespace App\Providers;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Nova\Nova;
 use Laravel\Nova\NovaApplicationServiceProvider;
+use Maddhatter\LaravelFullcalendar\LaravelFullcalendar;
+use Composer\Onboarding\Onboarding;
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
 {
@@ -66,7 +68,10 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
      */
     public function tools()
     {
-        return [];
+        return [
+            new LaravelFullcalendar,
+            // new Onboarding,
+        ];
     }
 
     /**
