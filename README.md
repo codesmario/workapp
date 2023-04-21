@@ -9,6 +9,11 @@
 
 ## Instalacion
 
+Crear una copia del archivo .env.example con el nombre de .env
+> cp .env.example .env
+
+
+
 Correr los siguientes compandos
 > composer install
 
