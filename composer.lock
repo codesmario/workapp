@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "df64e6a6d4e692712acf2e49d0dfe858",
+    "content-hash": "0fb0b6129af1a46b1ccbd043ce156837",
     "packages": [
         {
             "name": "brick/math",
@@ -118,6 +118,42 @@
                 }
             ],
             "time": "2023-01-15T23:59:01+00:00"
+        },
+        {
+            "name": "composer/onboarding",
+            "version": "dev-reto-dificil",
+            "dist": {
+                "type": "path",
+                "url": "./nova-components/Onboarding",
+                "reference": "27d778a299776525e0a300a75dc1a39d38000205"
+            },
+            "require": {
+                "php": "^7.3|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Composer\\Onboarding\\ToolServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\Onboarding\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova tool.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "dflydev/dot-access-data",
@@ -2343,7 +2379,7 @@
         },
         {
             "name": "maddhatter/laravel-fullcalendar",
-            "version": "dev-main-calendar",
+            "version": "dev-reto-dificil",
             "dist": {
                 "type": "path",
                 "url": "./nova-components/LaravelFullcalendar",
@@ -8861,7 +8897,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "maddhatter/laravel-fullcalendar": 20
+        "maddhatter/laravel-fullcalendar": 20,
+        "composer/onboarding": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

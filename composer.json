@@ -14,7 +14,8 @@
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
         "laravel/nova": "~4.0",
-        "maddhatter/laravel-fullcalendar": "@dev"
+        "maddhatter/laravel-fullcalendar": "@dev",
+        "composer/onboarding": "@dev"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -76,6 +77,10 @@
         "0": {
             "type": "path",
             "url": "./nova-components/LaravelFullcalendar"
+        },
+        "1": {
+            "type": "path",
+            "url": "./nova-components/Onboarding"
         }
     }
 }
